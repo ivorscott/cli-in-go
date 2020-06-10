@@ -20,3 +20,21 @@ echo "My first command line tool with Go" | ./wc
 ❯ cat main.go | wc -l
 38
 ```
+
+### Cross compilation
+
+Cross compilation is a process of compiling programs for different platforms than the one you are currently on. By default, the current operating system and architecture is detected when using the `go build` tool. We can prefix the command with the `GOOS` environment variable (which stands for Go Operating System) to change the target operating system.
+
+```bash
+GOOS=darwin go build
+GOOS=linux go build
+GOOS=windows go build
+```
+
+Run `go env` to reveal all your environment variable settings.
+
+The result of the go build command is a static binary. All the dependencies are packaged inside. So no other runtime dependencies are required. Platforms with a static program binary don't even need Go installed.
+
+On Windows, the word counter static binary could be used like so:
+
+`echo "Testing wc command on Windows" | wc.exe`
