@@ -8,9 +8,14 @@ import (
 	"github.com/ivorscott/go-cli-training/todo"
 )
 
-const todoFileName = ".todo.json"
+// Default file name
+var todoFileName = ".todo.json"
 
 func main() {
+	// Check if the user defined the ENV VAR for a custom file name
+	if os.Getenv("TODO_FILENAME") != "" {
+		todoFileName = os.Getenv("TODO_FILENAME")
+	}
 	task := flag.String("task", "", "Task to be included in the ToDo List")
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
@@ -25,11 +30,7 @@ func main() {
 	switch {
 	case *list:
 		// List current to do items
-		for _, item := range *l {
-			if !item.Done {
-				fmt.Println(item.Task)
-			}
-		}
+		fmt.Print(l)
 	case *complete > 0:
 		// Complete the given item
 		if err := l.Complete(*complete); err != nil {

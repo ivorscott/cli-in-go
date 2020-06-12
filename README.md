@@ -38,3 +38,30 @@ The result of the go build command is a static binary. All the dependencies are 
 On Windows, the word counter static binary could be used like so:
 
 `echo "Testing wc command on Windows" | wc.exe`
+
+## Todo APP
+
+[todo](https://github.com/ivorscott/go-cli-training/tree/master/todo)
+
+### Demo
+
+```
+❯ cd todo/cmd/todo
+
+❯ go build .
+
+❯ ./todo -task "Add this item"
+❯ ./todo -task "Add this item too"
+
+❯ ./todo -list
+  1: Test env vars design
+  2: Add this item
+  3: Add this item too
+
+❯ ./todo -complete 3
+
+❯ ./todo -list
+  1: Test env vars design
+  2: Add this item
+X 3: Add this item too
+```
