@@ -11,7 +11,7 @@ import (
 
 var (
 	binName  = "todo"
-	fileName = ".todo.json"
+	fileName = "new-todo.json"
 )
 
 func TestMain(m *testing.M) {
