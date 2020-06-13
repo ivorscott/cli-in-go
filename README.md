@@ -50,18 +50,16 @@ On Windows, the word counter static binary could be used like so:
 
 ❯ go build .
 
-❯ ./todo -task "Add this item"
-❯ ./todo -task "Add this item too"
+❯ ./todo -add This item comes from Args
+❯ echo "This item comes from STDIN" | ./todo -add
 
 ❯ ./todo -list
-  1: Test env vars design
-  2: Add this item
-  3: Add this item too
+  1: This item comes from Args
+  2: This item comes from STDIN
 
-❯ ./todo -complete 3
+❯ ./todo -complete 2
 
 ❯ ./todo -list
-  1: Test env vars design
-  2: Add this item
-X 3: Add this item too
+  1: This item comes from Args
+X 2: This item comes from STDIN
 ```
