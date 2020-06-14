@@ -63,3 +63,19 @@ On Windows, the word counter static binary could be used like so:
   1: This item comes from Args
 X 2: This item comes from STDIN
 ```
+
+## Markdown Preview
+
+[mdp](https://github.com/ivorscott/go-cli-training/tree/master/mdp)
+
+### Demo
+
+```
+❯ cd mdp
+
+❯ go build .
+
+❯ ./mdp -file README.md
+
+❯ ./mdp -file README.md -t template-fmt.html.tmpl
+```
