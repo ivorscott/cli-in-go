@@ -39,7 +39,7 @@ On Windows, the word counter static binary could be used like so:
 
 `echo "Testing wc command on Windows" | wc.exe`
 
-## Todo APP
+## Todo App
 
 [todo](https://github.com/ivorscott/go-cli-training/tree/master/todo)
 
