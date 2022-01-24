@@ -1,4 +1,4 @@
-# go-cli-training
+# go cli training
 
 ## Word Counter
 
